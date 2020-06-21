@@ -1,7 +1,7 @@
 
 local EEPROMProxy, internetProxy, GPUProxy = component.proxy(component.list("eeprom")()), component.proxy(component.list("internet")()), component.proxy(component.list("gpu")())
 
-local repositoryURL = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/master/"
+local repositoryURL = "https://raw.githubusercontent.com/GitRomBuilder/ShadowOS/master/"
 local installerURL = "Installer/"
 local EFIURL = "EFI/Minified.lua"
 
@@ -489,16 +489,6 @@ addStage(function()
 	layout:addChild(screensaversSwitchAndLabel)
 	layout:addChild(applicationsSwitchAndLabel)
 	layout:addChild(localizationsSwitchAndLabel)
-end)
-
--- License acception stage
-addStage(function()
-	checkLicense()
-
-	local lines = text.wrap({request("LICENSE")}, layout.width - 2)
-	local textBox = layout:addChild(GUI.textBox(1, 1, layout.width, layout.height - 3, 0xF0F0F0, 0x696969, lines, 1, 1, 1))
-
-	layout:addChild(acceptSwitchAndLabel)
 end)
 
 -- Downloading stage
