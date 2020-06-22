@@ -54,7 +54,7 @@
 	color = "Color",
 	toggleTopToolBar = "Toggle top toolbar",
 	find = "Find",
-	findSomeShit = "Let's find some shit…",
+	findSomeShit = "Start typing to find files…",
 	cut = "Cut",
 	copy = "Copy",
 	paste = "Paste",
