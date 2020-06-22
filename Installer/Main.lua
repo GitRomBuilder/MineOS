@@ -625,9 +625,6 @@ addStage(function()
 		filesystem.writeTable(paths.system.versions, versions, true)
 	end)
 		
-	-- Installing restore script
-	filesystem.copy("Settings.cfg", "paths.user.home")
-		
 	-- Done info
 	layout:removeChildren()
 	addImage(1, 1, "Done")
