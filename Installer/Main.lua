@@ -3,7 +3,7 @@ local EEPROMProxy, internetProxy, GPUProxy = component.proxy(component.list("eep
 
 local repositoryURL = "https://raw.githubusercontent.com/GitRomBuilder/ShadowOS/master/"
 local installerURL = "Installer/"
-local EFIURL = "EFI/Minified.lua"
+local EFIURL = "EFI/Full.lua"
 
 local installerPath = "/MineOS installer/"
 local installerPicturesPath = installerPath .. "Installer/Pictures/"
