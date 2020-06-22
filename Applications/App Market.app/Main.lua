@@ -1909,10 +1909,6 @@ for i = 1, #categories do
 	end
 end
 
-leftList:addItem(localization.categoryUpdates).onTouch = function()
-	loadCategory(nil, true)
-end
-
 messagesItem = leftList:addItem(localization.messages)
 messagesItem.onTouch = dialogs
 
