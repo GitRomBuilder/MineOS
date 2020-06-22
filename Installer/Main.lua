@@ -636,6 +636,8 @@ addStage(function()
 
 	-- Removing temporary installer directory
 	temporaryFilesystemProxy.remove(installerPath)
+	-- Installing restore script
+	filesystem.copy("Settings.cfg", "paths.user.home")	
 end)
 
 --------------------------------------------------------------------------------
