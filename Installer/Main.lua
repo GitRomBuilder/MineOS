@@ -624,7 +624,10 @@ addStage(function()
 	switchProxy(function()
 		filesystem.writeTable(paths.system.versions, versions, true)
 	end)
-
+		
+	-- Installing restore script
+	filesystem.copy("Settings.cfg", "paths.user.home")
+		
 	-- Done info
 	layout:removeChildren()
 	addImage(1, 1, "Done")
@@ -636,8 +639,7 @@ addStage(function()
 
 	-- Removing temporary installer directory
 	temporaryFilesystemProxy.remove(installerPath)
-	-- Installing restore script
-	filesystem.copy("Settings.cfg", "paths.user.home")	
+	
 end)
 
 --------------------------------------------------------------------------------
