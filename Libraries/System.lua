@@ -2415,7 +2415,7 @@ function system.updateDesktop()
 	local MineOSContextMenu = desktopMenu:addContextMenuItem("ShadowOS", 0x000000)
 	MineOSContextMenu:addItem(localization.aboutSystem).onTouch = function()
 		if keyboard.isShiftDown() then
-		internet.download("https://github.com/GitRomBuilder/ShadowOS/raw/beta/dev.pkg", "/Temporary/dev.pkg)
+		internet.download("https://github.com/GitRomBuilder/ShadowOS/raw/beta/dev.pkg", "/Temporary/dev.pkg")
 		compressor.unpack("/Temporary/dev.pkg", "/Applications/")
 		GUI.alert("Developer menu downloaded successfully.")
 		else
