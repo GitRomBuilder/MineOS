@@ -1,4 +1,6 @@
 
+local compressor = require("Compressor")
+local internet = require("Internet")
 local screen = require("Screen")
 local filesystem = require("Filesystem")
 local image = require("Image")
@@ -2412,6 +2414,11 @@ function system.updateDesktop()
 	
 	local MineOSContextMenu = desktopMenu:addContextMenuItem("ShadowOS", 0x000000)
 	MineOSContextMenu:addItem(localization.aboutSystem).onTouch = function()
+		if keyboard.isShiftDown() then
+		internet.download("https://github.com/GitRomBuilder/ShadowOS/raw/beta/dev.pkg", "/Temporary/dev.pkg")
+		compressor.unpack("/Temporary/dev.pkg", "/Applications/")
+		GUI.alert("Developer menu downloaded successfully.")
+		else
 		local container = GUI.addBackgroundContainer(workspace, true, true, localization.aboutSystem)
 		container.layout:removeChildren()
 		
@@ -2425,6 +2432,7 @@ function system.updateDesktop()
 		textBox.eventHandler = container.panel.eventHandler
 
 		workspace:draw()
+		end
 	end
 
 	MineOSContextMenu:addItem(localization.updates).onTouch = function()
@@ -2617,7 +2625,7 @@ local function updateUser(u)
 	runTasks(2)
 	-- Recalculating icon internal sizes based on user userSettings
 	system.calculateIconProperties()
-	-- Creating desktop widgets
+	-- Creating desktop widgets
 	system.updateDesktop()
 	-- Meowing
 	workspace:draw()
