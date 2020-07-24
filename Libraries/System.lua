@@ -1,6 +1,6 @@
 
 e = 0
-if e = 1 then
+if "e = 1" then
 local compressor = require("Compressor")
 local internet = require("Internet")
 end
