@@ -1,6 +1,9 @@
 
+e = 0
+if e = 1 then
 local compressor = require("Compressor")
 local internet = require("Internet")
+end
 local screen = require("Screen")
 local filesystem = require("Filesystem")
 local image = require("Image")
