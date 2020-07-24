@@ -1,9 +1,6 @@
 
-e = 0
-if "e = 1" then
 local compressor = require("Compressor")
 local internet = require("Internet")
-end
 local screen = require("Screen")
 local filesystem = require("Filesystem")
 local image = require("Image")
@@ -345,7 +342,6 @@ local function uploadToPastebin(path)
 
 				workspace:draw()
 
-				local internet = require("Internet")
 				result, reason = internet.request("http://pastebin.com/api/api_post.php", internet.serialize({
 					api_option = "paste",
 					api_dev_key = "fd92bd40a84c127eeb6804b146793c97",
